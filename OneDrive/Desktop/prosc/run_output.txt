@@ -1,0 +1,138 @@
+
+Available Time Slots:
+<DatetimeArray>
+['2024-01-03 06:00:00', '2024-01-03 07:00:00', '2024-01-03 08:00:00',
+ '2024-01-03 09:00:00', '2024-01-03 10:00:00', '2024-01-03 11:00:00',
+ '2024-01-03 12:00:00', '2024-01-03 13:00:00', '2024-01-03 14:00:00',
+ '2024-01-03 15:00:00', '2024-01-03 16:00:00', '2024-01-03 17:00:00',
+ '2024-01-03 18:00:00']
+Length: 13, dtype: datetime64[ns]
+
+Enter time exactly as shown above: 
+Zone Selected   : 164
+Time Selected   : 2024-01-03 18:00:00 
+Total Demand    : 102.53459
+Traffic Index (tau) : 0.5  (constant, paper assumption)
+Emission Factor     : 0.05
+Load per Node       : 17.0891
+
+RL Training Complete in 0.1833s
+Optimized Route: ['Depot', 'P6', 'P4', 'P1', 'P5', 'P3', 'P2', 'Depot']
+
+Execution Times:
+  Random         : 0.001000s
+  Greedy         : 0.000028s
+  BruteForce     : 0.003187s
+  Proposed-RL    : 0.183307s
+
+===== ALL RANDOM ROUTES (20 samples) =====
+Random Route  1: ['Depot', 'P4', 'P3', 'P5', 'P6', 'P2', 'P1', 'Depot'] | Distance: 46.07 | Emission: 13.41
+Random Route  2: ['Depot', 'P3', 'P1', 'P2', 'P5', 'P4', 'P6', 'Depot'] | Distance: 40.42 | Emission: 13.03
+Random Route  3: ['Depot', 'P2', 'P4', 'P1', 'P6', 'P3', 'P5', 'Depot'] | Distance: 49.21 | Emission: 14.33
+Random Route  4: ['Depot', 'P5', 'P6', 'P2', 'P4', 'P3', 'P1', 'Depot'] | Distance: 51.06 | Emission: 15.55
+Random Route  5: ['Depot', 'P1', 'P6', 'P5', 'P3', 'P4', 'P2', 'Depot'] | Distance: 49.18 | Emission: 14.98
+Random Route  6: ['Depot', 'P2', 'P6', 'P4', 'P1', 'P5', 'P3', 'Depot'] | Distance: 43.45 | Emission: 11.32
+Random Route  7: ['Depot', 'P2', 'P4', 'P3', 'P1', 'P5', 'P6', 'Depot'] | Distance: 41.75 | Emission: 13.59
+Random Route  8: ['Depot', 'P5', 'P1', 'P4', 'P3', 'P6', 'P2', 'Depot'] | Distance: 50.05 | Emission: 15.35
+Random Route  9: ['Depot', 'P5', 'P1', 'P2', 'P3', 'P4', 'P6', 'Depot'] | Distance: 40.86 | Emission: 13.21
+Random Route 10: ['Depot', 'P3', 'P5', 'P6', 'P1', 'P2', 'P4', 'Depot'] | Distance: 47.32 | Emission: 15.03
+Random Route 11: ['Depot', 'P2', 'P1', 'P5', 'P3', 'P4', 'P6', 'Depot'] | Distance: 36.99 | Emission: 11.56
+Random Route 12: ['Depot', 'P1', 'P4', 'P6', 'P3', 'P5', 'P2', 'Depot'] | Distance: 44.77 | Emission: 13.09
+Random Route 13: ['Depot', 'P6', 'P3', 'P1', 'P5', 'P4', 'P2', 'Depot'] | Distance: 41.99 | Emission: 11.91
+Random Route 14: ['Depot', 'P4', 'P1', 'P2', 'P6', 'P5', 'P3', 'Depot'] | Distance: 46.07 | Emission: 12.44
+Random Route 15: ['Depot', 'P2', 'P4', 'P6', 'P3', 'P1', 'P5', 'Depot'] | Distance: 46.38 | Emission: 13.13
+Random Route 16: ['Depot', 'P3', 'P6', 'P5', 'P1', 'P4', 'P2', 'Depot'] | Distance: 51.24 | Emission: 15.86
+Random Route 17: ['Depot', 'P1', 'P5', 'P4', 'P6', 'P3', 'P2', 'Depot'] | Distance: 47.32 | Emission: 14.18
+Random Route 18: ['Depot', 'P5', 'P4', 'P6', 'P1', 'P3', 'P2', 'Depot'] | Distance: 46.96 | Emission: 14.03
+Random Route 19: ['Depot', 'P1', 'P6', 'P2', 'P3', 'P5', 'P4', 'Depot'] | Distance: 45.25 | Emission: 14.15
+Random Route 20: ['Depot', 'P1', 'P3', 'P2', 'P5', 'P6', 'P4', 'Depot'] | Distance: 43.51 | Emission: 13.40
+
+===== PERFORMANCE COMPARISON =====
+
+Random (avg)
+  Route    : ['Depot', 'P4', 'P3', 'P5', 'P6', 'P2', 'P1', 'Depot']
+  Distance : 45.49
+  Emission : 13.68
+  Fuel Cost: 568.65
+
+Greedy
+  Route    : ['Depot', 'P6', 'P4', 'P1', 'P5', 'P3', 'P2', 'Depot']
+  Distance : 35.91
+  Emission : 9.31
+  Fuel Cost: 448.88
+
+BruteForce
+  Route    : ['Depot', 'P2', 'P5', 'P3', 'P1', 'P4', 'P6', 'Depot']
+  Distance : 35.27
+  Emission : 10.82
+  Fuel Cost: 440.89
+
+Proposed-RL
+  Route    : ['Depot', 'P6', 'P4', 'P1', 'P5', 'P3', 'P2', 'Depot']
+  Distance : 35.91
+  Emission : 9.31
+  Fuel Cost: 448.88
+
+Distance Reduction over Random (%): 21.06
+Carbon   Reduction over Random (%): 31.93
+Fuel Cost Reduction over Random (%): 21.06
+
+===== MULTI-ZONE / TIME-SLOT SIMULATION =====
+
+  Peak Hour:
+    Random      : dist=51.79, emis=21.62, fuel=647.41
+    Greedy      : dist=35.91, emis=13.03, fuel=448.88
+    BruteForce  : dist=35.27, emis=15.15, fuel=440.89
+    Proposed-RL : dist=35.91, emis=13.03, fuel=448.88
+
+  Medium Demand:
+    Random      : dist=49.71, emis=14.55, fuel=621.40
+    Greedy      : dist=35.91, emis=9.31, fuel=448.88
+    BruteForce  : dist=35.27, emis=10.82, fuel=440.89
+    Proposed-RL : dist=35.91, emis=9.31, fuel=448.88
+
+  Off-Peak:
+    Random      : dist=51.25, emis=9.38, fuel=640.58
+    Greedy      : dist=35.91, emis=5.59, fuel=448.88
+    BruteForce  : dist=35.27, emis=6.49, fuel=440.89
+    Proposed-RL : dist=35.91, emis=5.59, fuel=448.88
+
+Average Distance Reduction across time slots : 29.45%
+Average Emission Reduction across time slots  : 38.71%
+
+Running 30-run statistical test (please wait)...
+
+===== STATISTICAL SIGNIFICANCE TEST (30 runs) =====
+Distance -- Mean Random : 46.27 +/- 3.90
+Distance -- Mean RL     : 37.04 +/- 2.03
+t=11.3114, p=0.0000 --> Significant
+
+Emission -- Mean Random : 13.67 +/- 1.50
+Emission -- Mean RL     : 9.70 +/- 0.74
+t=12.7920, p=0.0000 --> Significant
+
+===== OPTIMIZED ROUTE - STEP-BY-STEP =====
+  Step 1: Depot -> P6 | dist=9.94 | emis=4.2447 | fuel=Rs124.19
+  Step 2: P6 -> P4 | dist=2.44 | emis=1.0414 | fuel=Rs30.47
+  Step 3: P4 -> P1 | dist=2.57 | emis=1.0976 | fuel=Rs32.11
+  Step 4: P1 -> P5 | dist=1.38 | emis=0.5891 | fuel=Rs17.24
+  Step 5: P5 -> P3 | dist=1.57 | emis=0.6704 | fuel=Rs19.62
+  Step 6: P3 -> P2 | dist=3.90 | emis=1.6674 | fuel=Rs48.79
+  Step 7: P2 -> Depot | dist=14.12 | emis=0.0000 | fuel=Rs176.47
+
+Total Distance  : 35.91 km
+Total Emission  : 9.3106 kg CO2
+Total Fuel Cost : Rs448.88
+EEI (RL)        : 0.3067
+
+===== RESULTS =====
+Optimized Route: ['Depot', 'P6', 'P4', 'P1', 'P5', 'P3', 'P2', 'Depot']
+Random Distance: 45.49
+Optimized Distance: 35.91
+Random Emission: 13.68
+Optimized Emission: 9.31
+Distance Improvement (%): 21.06
+Carbon Reduction (%): 31.93
+
+All 16 Research Graphs Generated Successfully.
+Seaborn available: True
